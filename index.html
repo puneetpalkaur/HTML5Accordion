@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Accordion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background: #1a205c;
+            color: #ff948e;
+            font-family: 'Pacifico', cursive;
+            box-sizing: border-box;
+        }
+        div{
+            box-sizing: border-box;
+
+        }
+
+        /* Chrome */
+        details summary::-webkit-details-marker {
+            display:none;
+        }
+
+        /* Firefox */
+        details > summary {
+            list-style: none;
+        }
+
+        details[open] summary ~ * {
+            animation: slomo .3s ease-in-out;
+        }
+        @keyframes slomo {
+            0%    {opacity: 0;}
+            100%  {opacity: 1; }
+        }
+
+        summary{
+            border: none;
+            outline:none;
+            background: #ff948e;
+            color: #1a205c;
+            padding-left: 10px;
+            align-items: center;
+            border-radius: 6px;
+            box-shadow: 0 0 3px whitesmoke;
+        }
+
+        .main-card{
+            padding: 40px;
+        }
+        .title{
+            cursor: pointer;
+            letter-spacing: 1px;
+        }
+        .main-left{
+            font-size: 100px;
+            height: 100vh;
+            text-align: left;
+            width: 50%;
+            padding: 20px 0 0 50px;
+            font-family: 'Cabin', sans-serif;
+        }
+        .main-flx{
+            width: 100%;
+            display: inline-flex;
+            justify-content: space-between;
+        }
+        .right{
+            text-align: left;
+            width: 50%;
+            padding-right: 50px;
+        }
+        .one{
+            margin-top: 50px;
+        }
+
+        @media only screen and (max-width: 650px){
+            .main-flx{
+                width: 100%;
+                display: block!important;
+            }
+            .main-left{
+                height: unset;
+                text-align: center;
+                width: 100%;
+                font-size: 40px;
+                padding: 20px;
+            }
+            .right{
+                width: 100%;
+                padding-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-flx">
+    <div class="main-left" >
+        Accordion <br>using pure<br>HTML5 & CSS
+    </div>
+    <div class="right">
+        <details class="one">
+            <summary>
+                <div class="title">
+                    <h1>Part 1</h1>
+                </div>
+            </summary>
+
+            <div class="main-card">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+        </details>
+
+        <details>
+            <summary>
+                <div class="title">
+                    <h1>Part 2</h1>
+                </div>
+            </summary>
+
+            <div class="main-card">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+        </details>
+        <details>
+            <summary>
+                <div class="title">
+                    <h1>Part 3</h1>
+                </div>
+            </summary>
+
+            <div class="main-card">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+        </details>
+    </div>
+</div>
+
+</body>
+</html>
